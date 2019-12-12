@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>LI Hanze</title>
+    <link rel="stylesheet" href="assets/css/el-index.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/el-index.js"></script>
+    <script src="assets/js/wow.js"></script>
+</head>
+<body>
+<div id="app" v-cloak>
+    <div class="container" v-if="!main">
+        <div class="dialog">
+            <el-row>
+                <el-col :span="19" :offset="2">
+                    <transition-group style="height: 100%; vertical-align: middle;text-align: center;" name="list"
+                                      tag="p">
+                        <h1 style="color: white;" v-for="(item, index) in items" v-bind:key="index" class="list-item">
+                            {{ item }}
+                        </h1>
+                    </transition-group>
+                </el-col>
+                <el-col style="height: 100%;padding-top: 35px" :span="1">
+                    <el-button type="primary" v-on:click="show()">GO!</el-button>
+                </el-col>
+            </el-row>
+        </div>
+    </div>
+    <el-container v-if="main">
+        <el-header style="height: 100px">
+            <div>
+                <el-row :gutter="10">
+                    <el-col :xs="0" :sm="1" :md="1" :lg="1" :xl="2">
+                        <div><h1></h1></div>
+                    </el-col>
+                    <el-col :xs="24" :sm="22" :md="22" :lg="22" :xl="20">
+                        <h1 class="wow animated flipInX delay-1s">
+                            Introduction<br>Hanze Li —— Group of DATA Processing in Lasalle College
+                        </h1>
+                    </el-col>
+                    <el-col :xs="0" :sm="1" :md="1" :lg="1" :xl="2">
+                        <div><h1></h1></div>
+                    </el-col>
+                </el-row>
+            </div>
+        </el-header>
+        <el-main>
+            <el-row :gutter="30">
+                <el-col :xs="0" :sm="1" :md="1" :lg="1" :xl="2">
+                    <div><h1></h1></div>
+                </el-col>
+                <el-col :xs="24" :sm="22" :md="22" :lg="22" :xl="20">
+                        <span class="wow animated jackInTheBox delay-2s">
+                            Focus on what makes me passionate.<br>
+                            Crazy Foodie and Adventure Traveller<br><br>
+                            Doer or A Dont’er.<br><br>
+                            Education<br>
+                            2015-2017 International High School in China<br>
+                            2017-now  Lasalle College in Montreal,QC,Canada<br><br>
+                            Working Experience <br>
+                            English Assistant, XinDongFang education institution,Beijing China 2017-2018<br>
+                            Waiter, Sammi&Soup Dumpling 2018-2019<br>
+                        </span>
+                </el-col>
+                <el-col :xs="0" :sm="1" :md="1" :lg="1" :xl="2">
+                    <div><h1></h1></div>
+                </el-col>
+            </el-row>
+            <el-row :gutter="10">
+                <el-col :xs="0" :sm="1" :md="1" :lg="1" :xl="2">
+                    <div><h1></h1></div>
+                </el-col>
+                <el-col :xs="24" :sm="22" :md="22" :lg="22" :xl="20">
+                    <el-row :gutter="10">
+                        <el-col :xs="6" :sm="6" :md="3" :lg="3" :xl="3">
+                            <h1 style="margin-bottom: -20px;" class="wow animated lightSpeedIn delay-3s">
+                                Traveling Life
+                            </h1>
+                        </el-col>
+                    </el-row>
+                    <el-row :gutter="10">
+                        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                            <div style="padding: 20px" class="grid-content bg-purple">
+                                <img class="wow animated bounceInRight delay-4s" width="100%" src="assets/img/m1.jpeg" alt="">
+                            </div>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                            <div style="padding: 20px" class="grid-content bg-purple-light">
+                                <img class="wow animated bounceInLeft delay-4s" width="100%" src="assets/img/m2.jpeg" alt="">
+                            </div>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                            <div style="padding: 20px" class="grid-content bg-purple">
+                                <img class="wow animated bounceInRight" width="100%" src="assets/img/m3.jpeg" alt="">
+                            </div>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+                            <div style="padding: 20px" class="grid-content bg-purple-light">
+                                <img class="wow animated bounceInLeft" width="100%" src="assets/img/m4.jpeg" alt="">
+                            </div>
+                        </el-col>
+                    </el-row>
+                    <el-row :gutter="10">
+                        <el-col :xs="6" :sm="6" :md="3" :lg="3" :xl="3">
+                            <h1 style="margin-bottom: -20px;" class="wow animated lightSpeedIn">
+                                FooDie Life
+                            </h1>
+                        </el-col>
+                    </el-row>
+                    <el-row :gutter="10">
+                        <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
+                            <div style="padding: 20px" class="grid-content bg-purple-light">
+                                <img class="wow animated bounceInLeft delay-1s" width="100%" src="assets/img/food1.jpeg" alt="">
+                            </div>
+                        </el-col>
+                        <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
+                            <div style="padding: 20px" class="grid-content bg-purple">
+                                <img class="wow animated bounceInRight delay-1s" width="100%" src="assets/img/food2.jpeg" alt="">
+                            </div>
+                        </el-col>
+                        <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
+                            <div style="padding: 20px" class="grid-content bg-purple-light">
+                                <img class="wow animated bounceInLeft delay-1s" width="100%" src="assets/img/food3.jpeg" alt="">
+                            </div>
+                        </el-col>
+                        <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
+                            <div style="padding: 20px" class="grid-content bg-purple">
+                                <img class="wow animated bounceInRight delay-1s" width="100%" src="assets/img/food4.jpeg" alt="">
+                            </div>
+                        </el-col>
+                    </el-row>
+                </el-col>
+                <el-col :xs="0" :sm="1" :md="1" :lg="1" :xl="2">
+                    <div><h1></h1></div>
+                </el-col>
+            </el-row>
+            <el-row v-if="!more">
+                <el-col :xs="0" :sm="1" :md="1" :lg="1" :xl="2">
+                    <div><h1></h1></div>
+                </el-col>
+                <el-col :xs="24" :sm="22" :md="22" :lg="22" :xl="20">
+                    <div>
+                        <el-button style="width: 100%" type="primary" v-on:click="showMore()">more</el-button>
+                    </div>
+                </el-col>
+                <el-col :xs="0" :sm="1" :md="1" :lg="1" :xl="2">
+                    <div><h1></h1></div>
+                </el-col>
+            </el-row>
+            <el-row v-if="more">
+                <div>
+                    <video v-scroll id="vid" style="width: 100%;" src="assets/video/more.mp4" autoplay controls
+                           x5-video-player-fullscreen="true" webkit-playsinline="true" x-webkit-airplay="true"
+                           playsinline="true" x5-playsinline>
+                    </video>
+                </div>
+            </el-row>
+        </el-main>
+    </el-container>
+</div>
+</body>
+<script type="text/javascript" defer src="assets/js/index.js"></script>
+</html>

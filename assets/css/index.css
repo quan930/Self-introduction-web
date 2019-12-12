@@ -1,0 +1,48 @@
+.grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+}
+.list-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+    transition: all 1s;
+}
+.list-enter, .list-leave-to
+    /* .list-leave-active for below version 2.1.8 */ {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 0;
+    white-space: nowrap;
+    background: url(../img/barkground.jpg) no-repeat;
+    overflow: hidden;
+    background-size:cover;
+}
+
+.container:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.dialog {
+    width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 14px;
+    white-space: normal;
+    letter-spacing: -0.5em
+}
+[v-cloak]{
+    display: none;
+}
